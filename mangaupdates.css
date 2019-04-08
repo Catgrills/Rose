@@ -1,0 +1,525 @@
+/* ==UserStyle==
+@name           Rose
+@namespace      https://github.com/Catgrills/Clamp
+@version        1.0.1
+@description    An userstyle for Baka Updates called Rose.
+@author         Catgrills/Katgrills
+@preprocessor   uso
+@var select theme 'Theme' {
+    "Light": `
+    :root {
+        --body-bg: #F0F1F5 !important;
+        --card-bg: #FFF !important;
+        --card-bg-2: #F8F8F8 !important;
+        --border-color: #BEBEBE !important;
+        --primary-color: #000 !important;
+        --secondary-color: #333 !important;
+    }
+    `,
+    "Dark":`
+    :root {
+        --body-bg: #1F1F21 !important;
+        --card-bg: #262628 !important;
+        --card-bg-2: #151516 !important;
+        --border-color: #000 !important;
+        --primary-color: #FFF !important;
+        --primary-color: #EBEBEB !important;
+    }
+    `
+}
+==/UserStyle== */
+@-moz-document domain("mangaupdates.com") {
+
+    /*[[theme]]*/
+
+    /* GENERAL */
+
+    /** DESCRIPTION : set the main font and change others elements for every page **/
+    * {
+        font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+    }
+
+    *::-moz-focus-inner {
+        border: 0;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    a {
+        transition: all .3s ease-in-out !important;
+    }
+
+    body,
+    html {
+        background: var(--body-bg) !important;
+        overflow-x: hidden;
+    }
+
+    .btn.btn-primary.inbox.small_button.question_mark,
+    .col-6.text-center.specialtext.text-nowrap a:nth-of-type(1),
+    img[src="images/review_img.jpg"],
+    img[src="images/mcard.jpg"],
+    .ptop1.text a:nth-of-type(1),
+    .ptop1.text a:nth-last-of-type(1),
+    hr,
+    #footer,
+    .left-side-bar,*
+    .right-sidebar-background,
+    .round-border-gradient-left::after {
+        display: none !important;
+    }
+
+    .top-banner {
+
+        /*** BANNER ***/
+        background: var(--body-bg) !important;
+    }
+
+    .top-banner img {
+        background: no-repeat url("https://i.imgur.com/Z3aI20d.jpg") center !important;
+        background-size: cover !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+        height: 0px !important;
+        width: 0px !important;
+        padding: 200px 0px 0px 100% !important;
+        margin-top: 43px;
+    }
+
+    .top-banner::before {
+        color: #FFF !important;
+        content: "ばか updates";
+        font-family: "Droid Serif", "Honoka Antique-Kaku" !important;
+        font-size: 35pt;
+        font-weight: bold;
+        text-align: center !important;
+        text-shadow: 4px 3px 0px #30336B, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+        position: absolute !important;
+        top: 110px !important;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+
+    .round-border-gradient-left {
+
+        /*** LOGIN BAR ***/
+        background: var(--card-bg);
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+        max-width: 100% !important;
+        position: absolute;
+        margin-top: 42px;
+    }
+
+    #login_box_padding {
+        background: inherit !important;
+        border-radius: 0px !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: normal !important;
+        padding: 10px 10px 15px 10px !important;
+    }
+
+    #login_box_padding * {
+        color: var(--primary-color);
+        font-size: 14pt;
+        font-style: normal;
+        font-weight: normal !important;
+    }
+
+    .small_input {
+        background: var(--card-bg-2);
+        border: none;
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+
+    .flex-nowrap {
+
+        /*** MAIN CONTENT ***/
+        background: var(--card-bg-2) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+        margin-top: 95px !important;
+    }
+
+    .center-top-row {
+
+        /*** CENTER COLUMN TITLE ***/
+        background: transparent;
+        border: none;
+    }
+
+    .round-border-gradient-dark,
+    .round-border-gradient-dark::after {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0px !important;
+        color: var(--primary-color) !important;
+    }
+
+    .large_bold {
+        color: #FD79A8 !important;
+        font-size: 22pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+    .center-side-bar {
+
+        /*** CENTER COLUMN CONTENT ***/
+        padding: 20px !important;
+    }
+
+    .center-side-bar * {
+        color: var(--primary-color);
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+
+    .alt,
+    div[style*="background-color:#"],
+    .footer_background {
+        background: var(--card-bg) !important;
+    }
+
+    .news_container {
+
+        /*** CENTER COLUMN NEWS ***/
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 10px;
+    }
+
+    .news_container * {
+        background: var(--card-bg) !important;
+    }
+
+    .news_content,
+    .news_title {
+        border-bottom: 1px dotted var(--border-color);
+        padding: 0px 5px 10px 5px !important;
+        margin-bottom: 10px;
+    }
+
+    .c_header {
+        border-bottom: 1px dotted var(--border-color);
+        padding: 20px 10px !important;
+    }
+
+    .quote,
+    .spoiler.mouseover {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color);
+        padding: 10px;
+    }
+
+    .spoiler.mouseover {
+        border-color: var(--border-color);
+        color: var(--card-bg);
+    }
+
+    .alt.p-1 {
+
+        /*** CENTER COLUMN NEW RELEASES ***/
+        border-color: var(--border-color) !important;
+        padding: 10px !important;
+    }
+
+    .justify-content-between.align-items-center.specialtext.lettersbg {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        padding: 5px !important;
+    }
+
+    div[style*="background-image"] {
+        background-image: none !important;
+    }
+
+    .pt-2.pb-2.col-3.d-flex.text-nowrap.align-items-center.justify-content-end.specialtext a {
+
+        /*** CENTER COLUMN PAGINATION ***/
+        background: #833471 !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        padding: 5px 10px 8px 10px !important;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap {
+        margin-top: 14px;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap b,
+    .col-6.text-center.specialtext.text-nowrap a,
+    .ptop1.text b,
+    .ptop1.text a {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap a,
+    .ptop1.text a {
+        background: #FC427B !important;
+        color: #FFF;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap b,
+    .ptop1.text b {
+        background: #485460 !important;
+        color: #FFF;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap font {
+        color: #FFF !important;
+    }
+
+    .col-6.text-center.specialtext.text-nowrap,
+    .ptop1.text {
+        color: transparent;
+    }
+
+    .sCat {
+
+        /*** CENTER COLUMN MANGA INFO ***/
+        background: var(--card-bg);
+        border-radius: 1px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding-left: 5px;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+    }
+
+    .sCat * {
+        font-weight: normal !important;
+    }
+
+    .sContent span {
+        font-size: 14pt !important;
+    }
+
+    .table_content.col-12.text {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+    }
+
+    .table_content.col-12.text .inbox {
+        background: var(--card-bg-2) !important;
+        border-radius: 0px !important;
+        color: var(--primary-color) !important;
+        font-size: 14pt;
+        padding: 5px 10px 8px 10px !important;
+    }
+
+    .series_comment {
+        background: transparent;
+        border-bottom: 1px dotted var(--border-color);
+    }
+
+    .comment_rating {
+        background: transparent;
+        border: none;
+        text-shadow: none;
+    }
+
+    .comment_useful {
+        border-top: 1px solid var(--border-color);
+    }
+
+    .col-12.p-1[style*="border:1px solid"] {
+
+        /*** CENTER COLUMN REVIEWS ***/
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 10px 15px !important;
+    }
+
+    .frow {
+
+        /*** CENTER COLUMN FORUM ***/
+        border-color: var(--border-color);
+    }
+
+    .frow .row.no-gutters,
+    .frow1,
+    .frow2 {
+        padding: 10px;
+    }
+
+    .frow .row.no-gutters {
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    .frow .row.no-gutters:nth-last-of-type(1) {
+        border: none !important;
+    }
+
+    .frow *:not(.quote),.frow1 * {
+        background: var(--card-bg) !important;
+        border: none !important;
+    }
+
+    .frow1,
+    .frow2 {
+        border: 1px solid var(--border-color);
+    }
+
+    .ptop2.text a[href*="postreply"]::after {
+        background: #5758BB !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        content: "reply";
+        padding: 5px 10px 8px 10px !important;
+    }
+
+    .py-1 a[href*="createpoll"]::before {
+        background: #F97F51 !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        content: "create poll";
+        padding: 5px 10px 8px 10px !important;
+        position: absolute;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+
+    .py-1 a[href*="createtopic"]::before {
+        background: #1B9CFC !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        content: "create topic";
+        padding: 5px 10px 8px 10px !important;
+        position: absolute;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+
+    a[href*="postreply"] img,
+    a[href*="createtopic"] img,
+    a[href*="createpoll"] img {
+        opacity: 0;
+    }
+
+    .p-1.col-md-9.fcol2.fcol .inbox {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        font-size: 14pt;
+        padding: 5px 10px 8px 10px !important;
+    }
+
+    .inbox[name="preview"] {
+        background: #1289A7 !important;
+    }
+
+    .inbox[value="Create New Topic"],
+    .inbox[value="Create Poll"],
+    .inbox[value="Submit Reply"] {
+        background: #5758BB !important;
+    }
+
+    .tdesc {
+        font-size: 14pt !important;
+    }
+
+    .button,
+    .p-2.pt-2.pb-2.text .inbox[value="Search"] {
+
+        /*** CENTER COLUMN ADVANCED SEARCH ***/
+        background: var(--card-bg);
+        border: none;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: var(--primary-color) !important;
+        font-size: 14pt;
+        padding: 5px 10px 8px 10px !important;
+    }
+
+    .inbox[type="radio"] {
+        margin-top: -2px !important;
+    }
+
+    .minfo_bar {
+
+        /*** CENTER COLUMN PROFILE ***/
+        border-bottom: 1px dotted var(--border-color);
+    }
+
+    #minfoleft {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+        padding: 10px;
+    }
+
+    .right_search_row,
+    .side_content_row {
+
+        /*** RIGHT COLUMN ***/
+        background: transparent;
+        border-left: 1px dotted var(--border-color);
+        border-width: 0px 0px 0px 1px;
+        padding-left: 5px !important;
+        margin-left: -15px !important;
+    }
+
+    .position-relative.medium_bold.round-border-gradient-dark.text-center {
+        visibility: hidden;
+    }
+
+    .side_content_row * {
+        color: var(--secondary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    .inbox {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        color: var(--primary-color);
+        font-stretch: condensed;
+        padding: 5px;
+    }
+
+    .btn.btn-primary.inbox {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        font-size: 12pt;
+        font-stretch: condensed;
+        padding: 4px 6px 4.5px 6px;
+        margin-top: 5px;
+    }
+
+    .right_search_row .btn.btn-primary.inbox {
+        margin-top: 0px;
+        margin-left: -8px;
+    }
+
+    .d-flex.justify-content-end .btn-primary.inbox,
+    .p-0.text.d-flex .inbox {
+        margin-top: 0px;
+    }
+
+    .right_search_row u {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .navtitle * {
+        color: var(--primary-color) !important;
+        text-decoration: none !important;
+    }
+
+}
