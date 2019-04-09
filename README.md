@@ -35,3 +35,13 @@ I use several fonts for my custom stylesheet.
 </ol>
 
 <strong>Step 4 : Show your appreciation </strong>
+<ol>
+<li>Feel free to comment this submission (critique, suggestion, compliment, etc).</li>
+<li>If you like my works, don't hesitate to watch me.</li>
+<li>You can share it, but don't forget to mention me.</li>
+</ol>
+
+Report
+-------------------------------
+
+Don't hesitate to report any issues you find while using this userstyle.
