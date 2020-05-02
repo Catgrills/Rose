@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Rose
 @namespace      https://github.com/Catgrills/Clamp
-@version        1.0.1
+@version        1.0.2
 @description    An userstyle for Baka Updates called Rose.
 @author         Catgrills/Katgrills
 @preprocessor   uso
@@ -520,6 +520,15 @@
     .navtitle * {
         color: var(--primary-color) !important;
         text-decoration: none !important;
+    }
+      
+    /* MY LISTS */
+    
+    /** DESCRIPTION : change the elements of the my lists page **/
+    #list_table > :nth-child(2n),
+    .lcol4_bottom, .lcol4_top {
+        background: transparent;
+        border: none;
     }
 
 }
